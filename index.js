@@ -12,7 +12,7 @@ async function query_LLM(q, i) {
         let a = response.message.content;
     
     if (!a) {
-        a = `Answer to question ${i}: No response from model.`; // Fallback answer if empty
+        a = `Answer to question ${i}: No response from model.`;
     }
     fs.writeFile(`./Answers/a${i}.txt`, a, (err) => {
         if (err) {
